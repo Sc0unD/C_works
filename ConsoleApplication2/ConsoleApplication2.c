@@ -28,13 +28,6 @@ typedef struct {
     char gender;
 } human;
 
-
-//typedef struct {
-//    int number;
-//    int month;
-//    int year;
-//} date_of_birth;
-
 //void main()
 //{
 //    system("chcp 1251");
@@ -114,62 +107,64 @@ typedef struct {
 //            puts(countries[i].name);
 //        }
 //    }
+//    free(countries);
 //}
 
 
-void main() {
-    system("chcp 1251");
-
-    human* people;
-    int size, avg_age = 0, age ,year = 2022, month = 6, day = 5;
-
-    puts("Введите кол-во людей");
-    scanf("%d", &size);
-
-    people = (human*)malloc(size * sizeof(human));
-
-    for (int i = 0; i < size; i++) {
-
-        printf("Человек №%d\n", i + 1);
-        
-        puts("Введите ФИО");
-        getchar();
-        gets(people[i].fio);
-        
-        puts("Введите число рождения");
-        scanf("%d", &people[i].day);
-
-        puts("Введите месяц рождения");
-        scanf("%d", &people[i].month);
-
-        puts("Введите год рождения");
-        scanf("%d", &people[i].year);
-        
-        puts("Введите пол человека \"f\" или \"m\"");
-        getchar();
-        scanf("%c", &people[i].gender);
-        //people[i].gender = getchar();
-        //getch(people[i].gender);
-        
-
-        age = year - people[i].year;
-        if (people[i].month < month && people[i].day < day) {
-            age -= 1;
-        }
-
-        avg_age += age;
-
-        puts("");
-    }
-    avg_age /= size;
-
-    for (int i = 0; i < size; i++) {
-
-        age = year - people[i].year;
-        if (people[i].month < month && people[i].day < day) {
-            age -= 1;
-        }
-        if (age > avg_age && people[i].gender == 'm')
-            puts(people[i].fio);
-    }
-}
+//void main() {
+//    system("chcp 1251");
+//
+//    human* people;
+//    int size, avg_age = 0, age ,year = 2022, month = 6, day = 5;
+//
+//    puts("Введите кол-во людей");
+//    scanf("%d", &size);
+//
+//    people = (human*)malloc(size * sizeof(human));
+//
+//    for (int i = 0; i < size; i++) {
+//
+//        printf("Человек №%d\n", i + 1);
+//        
+//        puts("Введите ФИО");
+//        getchar();
+//        gets(people[i].fio);
+//        
+//        puts("Введите число рождения");
+//        scanf("%d", &people[i].day);
+//
+//        puts("Введите месяц рождения");
+//        scanf("%d", &people[i].month);
+//
+//        puts("Введите год рождения");
+//        scanf("%d", &people[i].year);
+//        
+//        puts("Введите пол человека \"f\" или \"m\"");
+//        getchar();
+//        scanf("%c", &people[i].gender);
+//        //people[i].gender = getchar();
+//        //getch(people[i].gender);
+//        
+//
+//        age = year - people[i].year;
+//        if (people[i].month < month && people[i].day < day) {
+//            age -= 1;
+//        }
+//
+//        avg_age += age;
+//
+//        puts("");
+//    }
+//    avg_age /= size;
+//
+//    for (int i = 0; i < size; i++) {
+//
+//        age = year - people[i].year;
+//        if (people[i].month < month && people[i].day < day) {
+//            age -= 1;
+//        }
+//        if (age > avg_age && people[i].gender == 'm')
+//            puts(people[i].fio);
+//    }
+//    free(people);
+//}

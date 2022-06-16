@@ -71,7 +71,7 @@ int main()  {
             fprintf(fp, "%d ", st[i].day);
             fprintf(fp, "%d ", st[i].month);
             fprintf(fp, "%d ", st[i].year);
-            fprintf(fp, "%s ", st[i].clas);
+            fprintf(fp, "%s \n", st[i].clas);
         }
     }
     fclose(fp);

@@ -39,7 +39,7 @@ int main() {
     }
 
     for (int i = 0; i < size; i++) {
-        if (strcmp(st[i].city, "Новосибирск") == 0 && st[i].nomer[strlen(st[i].nomer) - 1] == '0' && st[i].nomer[strlen(st[i].nomer) - 1] == '0') {
+        if (strcmp(st[i].city, "Новосибирск") == 0 && st[i].nomer[strlen(st[i].nomer) - 1] == '0' && st[i].nomer[strlen(st[i].nomer) - 2] == '0') {
             fprintf(fp, "%s\t", st[i].last_name);
             fprintf(fp, "%s\t", st[i].city);
             fprintf(fp, "%s\n", st[i].nomer);
